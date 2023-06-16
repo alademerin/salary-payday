@@ -34,7 +34,9 @@ import { useFormik } from "formik";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email("Enter a valid email address").required("Email is required"),
-  password: Yup.string().required("password is required"),
+  password: Yup.string()
+    .min(5, "password must contain at least 5 characters")
+    .required("password is required"),
 });
 
 const LoginPage = () => {

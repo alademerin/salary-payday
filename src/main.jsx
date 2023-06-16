@@ -12,16 +12,16 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    index:true,
+    index: true,
     element: <HomePage />,
-    errorElement:<ErrorPage/>
+    errorElement: <ErrorPage />,
+
   },
   {
     path: "/login",
     element: <LoginPage />,
   },
   { path: "/signup", element: <SignUpPage /> },
-  {}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

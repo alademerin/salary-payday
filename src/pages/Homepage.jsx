@@ -70,13 +70,13 @@ const Homepage = () => {
             img={Easy}
             title="Simple and Easy"
             subtext="After All, It's Your Pay.
-With SalaryPayDay, you can access up to 50% of your earned pay before payday."
+            With SalaryPayDay, you can access up to 50% of your earned pay before payday."
           />
           <Card
             img={InfinityLogo}
             title="Visibility & Transparency"
             subtext="After All, It's Your Pay.
-With SalaryPayDay, you can access up to 50% of your earned pay before payday."
+            With SalaryPayDay, you can access up to 50% of your earned pay before payday."
           />
         </div>
       </section>
