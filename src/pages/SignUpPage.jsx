@@ -54,7 +54,7 @@ const SignUpPage = () => {
           <Link to="/">
             <img src={Logo} className="w-40  lg:pt-10 lg:ml-32" />
           </Link>
-          <div className="mt-28 flex flex-col items-center inline">
+          <div className="mt-16 flex flex-col items-center inline">
             <Swiper
               modules={[Navigation, Autoplay, Pagination]}
               autoplay={{

@@ -9,8 +9,8 @@ const SwiperCard = ({ img, icon, perk, description }) => {
         <img src={img} />
         <img src={icon} className="absolute bottom-0 left-10" />
       </div>
-        <h1 className="text-3xl mt-20 font-semibold text-center">{perk}</h1>
-        <p className="text-subtextGrey text-center">{description}</p>
+      <h1 className="text-3xl mt-4 font-semibold text-center">{perk}</h1>
+      <p className="text-subtextGrey text-center">{description}</p>
     </div>
   );
 };
