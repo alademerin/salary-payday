@@ -7,18 +7,21 @@ import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignUpPage.jsx";
 // import Carousel from "./pages/Carousel.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     index:true,
     element: <HomePage />,
+    errorElement:<ErrorPage/>
   },
   {
     path: "/login",
     element: <LoginPage />,
   },
   { path: "/signup", element: <SignUpPage /> },
+  {}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
