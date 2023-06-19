@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AuthScaffold from "../components/AuthScaffold.jsx";
+
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Divider from "@mui/material/Divider";
@@ -64,57 +66,8 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex">
-      <div className="w-1/2 bg-primaryLighterAlt h-screen hidden lg:flex">
-        <div className="flex flex-col  w-full">
-          <Link to="/">
-            <img src={Logo} className="w-40  lg:pt-10 lg:ml-32" />
-          </Link>
-          <div className="mt-16 flex flex-col items-center inline">
-            {/* <div>1</div> */}
-            <Swiper
-              modules={[Navigation, Autoplay, Pagination]}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              slidesPerView={1}
-              loop={true}
-              pagination={{ el: ".swiper-custom-pagination" }}
-              // scrollbar={{ draggable: true }}
-              className="w-96"
-            >
-              <SwiperSlide>
-                <SwiperCard
-                  img={Step3}
-                  icon={Lock}
-                  perk="Early Prequalification and limitless Access"
-                  description="Get Prequalified Early and have unlimited access to your earned pay."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SwiperCard
-                  img={OldMan}
-                  icon={Easy}
-                  perk="Simple and Easy"
-                  description="After All, It's Your Pay.
-With SalaryPayDay, you can access up to 50% of your earned pay before payday."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SwiperCard
-                  img={LaptopMan}
-                  icon={InfinityLogo}
-                  perk="Visibility & Transparency"
-                  description="Check how much you have available anytime, anywhere. "
-                />
-              </SwiperSlide>
-            </Swiper>
-            {/* <div className="swiper-custom-pagination text-primaryOrange mt-40 space-x-2" /> */}
-          </div>
-        </div>
-      </div>
-      <div className="lg:flex lg:justify-center lg:items-center w-screen lg:w-1/2">
+    <AuthScaffold>
+      <div className="flex justify-center items-center w-screen ">
         <div className="mx-8 pt-14 ">
           <img src={Logo} className="lg:hidden" />
 
@@ -207,7 +160,7 @@ With SalaryPayDay, you can access up to 50% of your earned pay before payday."
           </form>
         </div>
       </div>
-    </div>
+    </AuthScaffold>
   );
 };
 

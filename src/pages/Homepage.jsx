@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import MobileSVG from "../assets/mobileSVGimage.png";
 import DesktopSVG from "../assets/desktopSVG.svg";
-import Card from "../components/Card";
 
 import Lock from "../assets/lock 1.png";
 import Easy from "../assets/easy 1.png";
