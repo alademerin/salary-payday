@@ -11,6 +11,7 @@ import Step3 from "../assets/YoungManSprayingCash.png";
 import Lock from "../assets/lock 1.png";
 import Easy from "../assets/easy 1.png";
 import InfinityLogo from "../assets/infinity 1.png";
+import TransparentEllipse from "../assets/transparentEllipse.svg";
 import * as Yup from "yup";
 
 import { Link } from "react-router-dom";
@@ -27,6 +28,28 @@ import "swiper/css/scrollbar";
 import { useFormik } from "formik";
 
 const AuthScaffold = ({ children }) => {
+  const swiperDetails = [
+    {
+      img: Step3,
+      icon: Lock,
+      perk: "Early Prequalification and limitless Access",
+      description: "Get Prequalified Early and have unlimited access to your earned pay.",
+    },
+    {
+      img: OldMan,
+      icon: Easy,
+      perk: "Simple and Easy",
+      description:
+        "After All, It's Your Pay. With SalaryPayDay, you can access up to 50% of your earned pay before payday.",
+    },
+    {
+      img: LaptopMan,
+      icon: InfinityLogo,
+      perk: "Visibility & Transparency",
+      description: "Check how much you have available anytime, anywhere. ",
+    },
+  ];
+
   return (
     <div className="flex">
       <div className="w-1/2 bg-primaryLighterAlt h-screen hidden lg:flex">
@@ -46,31 +69,17 @@ const AuthScaffold = ({ children }) => {
               pagination={{ el: ".swiper-custom-pagination" }}
               className="w-96"
             >
-              <SwiperSlide>
-                <SwiperCard
-                  img={Step3}
-                  icon={Lock}
-                  perk="Early Prequalification and limitless Access"
-                  description="Get Prequalified Early and have unlimited access to your earned pay."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SwiperCard
-                  img={OldMan}
-                  icon={Easy}
-                  perk="Simple and Easy"
-                  description="After All, It's Your Pay.
-With SalaryPayDay, you can access up to 50% of your earned pay before payday."
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <SwiperCard
-                  img={LaptopMan}
-                  icon={InfinityLogo}
-                  perk="Visibility & Transparency"
-                  description="Check how much you have available anytime, anywhere. "
-                />
-              </SwiperSlide>
+              {swiperDetails.map((x) => (
+                <SwiperSlide>
+                  <div className="relative">
+                    <img src={TransparentEllipse} className="absolute right-0" />
+                    <img src={x.img} />
+                    <img src={x.icon} className="absolute bottom-0 left-10" />
+                  </div>
+                  <h1 className="text-3xl mt-4 font-semibold text-center">{x.perk}</h1>
+                  <p className="text-subtextGrey text-center">{x.description}</p>
+                </SwiperSlide>
+              ))}
             </Swiper>
             {/* <div className="swiper-custom-pagination text-primaryOrange mt-40 space-x-2" /> */}
           </div>
