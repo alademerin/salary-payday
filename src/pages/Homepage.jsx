@@ -61,23 +61,30 @@ const Homepage = () => {
       </section>
       <section id="cards">
         <div className="flex flex-col items-center sm:px-36 mx-8 mt-10 space-y-6 lg:flex-row lg:space-x-6 md:justify-between md:items-center lg:space-y-0 ">
-          <Card
-            img={Lock}
-            title="Early Prequalification and limitless Access"
-            subtext="Get Prequalified Early and have unlimited access to your earned pay."
-          />
-          <Card
-            img={Easy}
-            title="Simple and Easy"
-            subtext="After All, It's Your Pay.
-            With SalaryPayDay, you can access up to 50% of your earned pay before payday."
-          />
-          <Card
-            img={InfinityLogo}
-            title="Visibility & Transparency"
-            subtext="After All, It's Your Pay.
-            With SalaryPayDay, you can access up to 50% of your earned pay before payday."
-          />
+          {[
+            {
+              icon: Lock,
+              title: "Early Prequalification and Limitless Access",
+              subtext: "Get Prequalified Early and have unlimited access to your earned pay.",
+            },
+            {
+              icon: Easy,
+              title: "Simple and Easy",
+              subtext:
+                "After All, It's Your Pay. With SalaryPayDay, you can access up to 50% of your earned pay before payday.",
+            },
+            {
+              icon: Lock,
+              title: "Visibility & Transparency",
+              subtext: "Check how much you have available anytime, anywhere. ",
+            },
+          ].map((card) => (
+            <div className="py-14 px-8 w-96 h-80 md:max-h-96 rounded-3xl bg-primaryLighterAlt ">
+              <img className="" src={card.icon} />
+              <h1 className="mt-8 text-2xl text-primaryBlue break-words">{card.title}</h1>
+              <p className="text-sm text-grey mt-4 break-words ">{card.subtext}</p>
+            </div>
+          ))}
         </div>
       </section>
 
