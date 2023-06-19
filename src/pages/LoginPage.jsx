@@ -54,12 +54,13 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = (e) => {
-    e.preventDefault;
+    e.preventDefault();
     setShowPassword((show) => !show);
   };
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
+    setShowPassword((show) => !show);
   };
 
   return (
