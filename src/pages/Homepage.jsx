@@ -14,8 +14,7 @@ import Step1 from "../assets/step1.svg";
 import Step2 from "../assets/step2.png";
 import Step3 from "../assets/step3.svg";
 import Logo from "../assets/logo.svg";
-import Video from "../assets/video.svg";
-
+import Video from "../assets/Video.svg";
 
 import { Link } from "react-router-dom";
 import Check from "../assets/check.png";
