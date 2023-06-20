@@ -5,7 +5,6 @@ import DesktopSVG from "../assets/desktopSVG.svg";
 
 import Lock from "../assets/lock 1.png";
 import Easy from "../assets/easy 1.png";
-import InfinityLogo from "../assets/infinity 1.png";
 
 import Facebook from "../assets/facebook.svg";
 import Instagram from "../assets/instagram.svg";
@@ -17,10 +16,8 @@ import Step3 from "../assets/step3.svg";
 import Logo from "../assets/logo.svg";
 import Video from "../assets/video.svg";
 
-import Divider from "../assets/Divider.svg";
 
 import { Link } from "react-router-dom";
-// import Logo from "../assets/logo.svg";
 import Check from "../assets/check.png";
 const Homepage = () => {
   return (
@@ -183,7 +180,7 @@ const Homepage = () => {
           <div className="mr-44">
             <img src={Logo} />
           </div>
-          <div className="flex space-x-32">
+          <div className="flex mt-6 space-x-32">
             <div className="pt-6 mr-35">
               <p className="text-white mb-8">solution</p>
               <div className="space-y-3">
